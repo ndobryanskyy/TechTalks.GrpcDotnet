@@ -1,0 +1,11 @@
+﻿@page
+@using TechTalks.FeatureManagement.Abstractions
+@model TechTalks.GrpcDotnet.Pages.IndexModel
+
+@inject IFeaturesStateSnapshot FeaturesStateSnapshot
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Hello @FeaturesStateSnapshot.IsEnabled("RedHeader")</h1>
